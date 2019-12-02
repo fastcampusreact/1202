@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+    <div>
+        <label for="name" type='text'>이름</label>
+        <input type="text" id="name" name="text"><br>
+        <label for="email">이메일</label>
+        <input type="text" id='email' name='email'>
+      </div>
+      <h2 class="name">이름</h2>
+      <h2 class="email">이메일</h2>
+</body>
+<script>
+  const $inputID = document.querySelector('#name');
+  const $inputEmail = document.querySelector('#email');
+  const $name = document.querySelector('.name');
+  const $email = document.querySelector('.email');
+
+  const enterID = () => {
+    $inputID.textContent = $name.textContent;
+  }
+
+  const enterEmail = () => {
+    $inputEmail.textContent = $email.textContent
+  }
+
+</script>
+</html>
