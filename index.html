@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <label for="name">이름</label>
+  <input id="name" type="text" name="text" class="inputName">
+  <label for="email">이메일</label>
+  <input id="email" type="text" name="email" class="inputEmail">
+  <h2 class="emailText">이메일</h2>
+  <h2 class="nameText">이름</h2>
+  <script>
+    const $inputName = document.querySelector('.inputName');
+    const $nameText = document.querySelector('.nameText');
+    const $inputEmail = document.querySelector('.inputEmail');
+    const $emailText = document.querySelector('.emailText');
+
+    $inputName.addEventListener('keyup', function(e) {
+      $nameText.innerHTML = `
+        <h2>${$inputName.value}</h2>`;
+    });
+
+    $inputEmail.addEventListener('keyup', function(e) {
+      $emailText.innerHTML = `
+        <h2>${$inputEmail.value}</h2>`;
+    });
+  </script>
+</body>
+</html>
