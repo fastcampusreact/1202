@@ -10,13 +10,13 @@
   const $emailHeading = document.querySelector('.emailHeading');
   const $nameHeading = document.querySelector('.nameHeading');
 
-  $name.onkeyup = (e) => {
-    if (e.keyCode !== 13) return;
+  $name.onkeyup = ({ keyCode }) => {
+    if (keyCode !== 13) return;
     $nameHeading.textContent = $name.value;
   };
 
-  $email.onkeyup = (e) => {
-    if (e.keyCode !== 13) return;
+  $email.onkeyup = ({ keyCode }) => {
+    if (keyCode !== 13) return;
     $emailHeading.textContent = $email.value;
   };
 </script>
