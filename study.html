@@ -11,10 +11,11 @@
   const nameView = document.querySelector('#name-view');
   const emailView = document.querySelector('#email-view');
 
-  const changeValue = ({ target }) => {
+  const changeValue = ({ target, keyCode }) => {
+    console.log(keyCode);
     target === nameInput ? nameView.textContent = `이름 ${nameInput.value}` : emailView.textContent = `이메일 ${emailInput.value}`;
   }
 
-  nameInput.onchange = changeValue;
-  emailInput.onchange = changeValue;
+  nameInput.onkeyup = changeValue;
+  emailInput.onkeyup = changeValue;
 </script>
