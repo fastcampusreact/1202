@@ -12,7 +12,8 @@
   const emailView = document.querySelector('#email-view');
 
   const changeValue = ({ target, keyCode }) => {
-    console.log(keyCode);
+    if (keyCode !== 13) return;
+
     target === nameInput ? nameView.textContent = `이름 ${nameInput.value}` : emailView.textContent = `이메일 ${emailInput.value}`;
   }
 
