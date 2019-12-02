@@ -14,7 +14,7 @@
   const changeValue = ({ target, keyCode }) => {
     if (keyCode !== 13) return;
 
-    target === nameInput ? nameView.textContent = `이름 ${nameInput.value}` : emailView.textContent = `이메일 ${emailInput.value}`;
+    target === nameInput ? nameView.textContent = `이름 ${target.value}` : emailView.textContent = `이메일 ${target.value}`;
   }
 
   nameInput.onkeyup = changeValue;
