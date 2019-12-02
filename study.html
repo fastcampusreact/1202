@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>20191202</title>
+</head>
+<body>
+  <label for="name">이름</label>
+  <input id="name" type="text" name="text">
+  <label for="email">이메일</label>
+  <input id="email" type="text" name="email">
+  <h2 class="first">이메일</h2>
+  <h2 class="second">이름</h2>
+  <script>
+    const $inputName = document.querySelector('#name');
+    const $inputEmail = document.querySelector('#email');
+    const $h2First = document.querySelector('.first');
+    const $h2Second = document.querySelector('.second');
+
+    const firstContent = () => {
+      $h2First.textContent = $inputName.value;
+    };
+
+    const secondContent = () => {
+      $h2Second.textContent = $inputEmail.value;
+    };
+
+    $inputName.onkeyup = ({ keyCode }) => {
+      if (keyCode !== 13) return;
+      firstContent();
+    };
+
+    $inputEmail.onkeyup = ({ keyCode }) => {
+      if (keyCode !== 13) return;
+      secondContent();
+    };
+  </script>
+</body>
+</html>
