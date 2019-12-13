@@ -1,0 +1,34 @@
+.video:first-child {
+  margin-top: 10px;
+}
+
+.video {
+  margin-bottom: 20px;
+}
+
+.video-wrapper {
+  position: relative;
+}
+
+.clearfix::after{
+  content: "";
+  display: block;
+  clear: both;
+}
+
+.video-wrapper img {
+  float: left;
+}
+
+.video-title, .video-description {
+  float: right;
+  width: 85%;
+}
+
+.video-title {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  height: 40px;
+  line-height: 40px;
+}

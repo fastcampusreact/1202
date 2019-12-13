@@ -1,0 +1,15 @@
+.video-wrapper {
+  width: 940px;
+}
+.video-player, .video-player-title {
+  display: block;
+  margin: 0 auto;
+  text-align: center;
+}
+.video-player-title {
+  padding-top: 20px;
+}
+.video-player {
+  width: 768px;
+  height: 432px;
+}
