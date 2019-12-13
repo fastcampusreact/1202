@@ -1,20 +1,16 @@
-<label for="name">이름</label>
-<input id="name" type="text" name="text">
-<label for="email">이메일</label>
-<input id="email" type="email" name="email">
-<h2 class="h2-email">이메일</h2>
-<h2 class="h2-name">이름</h2>
+<div class="field">
+  <label for="name">Enter your name</label>
+  <input id="name" type="text" name="name" data-model="name" />
+</div>
 
-<script>
-  const $inputname = document.querySelector('#name');
-  const $inputemail = document.querySelector('#email');
+<div class="field">
+  <label for="email">Enter your email</label>
+  <input id="email" type="text" name="email" data-model="email" />
+</div>
 
-  $inputemail.onkeyup = ({target, keyCode}) => {
-    const name = $inputname.value;
-    const email = $inputemail.value;
-    if (keyCode !== 13 || name === '' || email === '') return;
+<div class="results">
+  <h1 data-binding>name</h1>
+  <h2 data-binding>email</h2>
+</div>
 
-    document.querySelector('.h2-email').innerHTML = email;
-    document.querySelector('.h2-name').innerHTML = name;
-  }
-</script>
+<script src="/1202/app.js"></script>
