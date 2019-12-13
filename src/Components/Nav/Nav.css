@@ -1,0 +1,15 @@
+.menu-nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 60px;
+  background: #eaaa;
+  padding: 20px 0;
+}
+.YouTubeLogo {
+  height: 40px;
+  margin: 0 10px 0 10px;
+}
+.menu-list>a {
+  display: block;
+}
